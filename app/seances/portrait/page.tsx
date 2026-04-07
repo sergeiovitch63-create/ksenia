@@ -1,8 +1,9 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useEffect } from "react";
 import styles from "./page.module.css";
+import { PortraitOnlyCarousel } from "@/components/home/PortraitOnlyCarousel";
 
 export default function PortraitSeancePage() {
   useEffect(() => {
@@ -63,7 +64,7 @@ export default function PortraitSeancePage() {
       </svg>
 
       <section className={styles.hero}>
-        <div className={styles.heroLeft}>
+        <div className={styles.heroCenter}>
           <span className={`${styles.heroNum} ${styles.anim}`}>
             01 — Ксения Кошка
           </span>
@@ -71,6 +72,9 @@ export default function PortraitSeancePage() {
             Портретная фотосессия
           </h1>
           <div className={`${styles.divider} ${styles.anim} ${styles.anim2}`} />
+          <div className={styles.carouselWrap}>
+            <PortraitOnlyCarousel />
+          </div>
           <p
             className={`${styles.heroTagline} ${styles.anim} ${styles.anim2}`}
           >
@@ -92,85 +96,6 @@ export default function PortraitSeancePage() {
           >
             Записаться
           </Link>
-        </div>
-        <div className={styles.heroRight}>
-          <svg
-            className={styles.heroIllustration}
-            viewBox="0 0 400 400"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice"
-          >
-            <defs>
-              <radialGradient id="hero-bg-portrait" cx="50%" cy="40%" r="65%">
-                <stop offset="0%" stopColor="#2a2824" />
-                <stop offset="100%" stopColor="#0c0b0a" />
-              </radialGradient>
-              <radialGradient id="hero-light-portrait" cx="60%" cy="20%" r="55%">
-                <stop offset="0%" stopColor="rgba(255,255,255,0.14)" />
-                <stop offset="100%" stopColor="transparent" />
-              </radialGradient>
-            </defs>
-            <rect width="400" height="400" fill="url(#hero-bg-portrait)" />
-            <rect width="400" height="400" fill="url(#hero-light-portrait)" />
-            <ellipse cx="200" cy="155" rx="72" ry="82" fill="#c8c0b8" />
-            <path
-              d="M128 140 Q132 96 200 88 Q268 96 272 140"
-              fill="#111010"
-            />
-            <path
-              d="M128 140 Q118 168 122 230 Q130 198 136 165Z"
-              fill="#111010"
-            />
-            <path
-              d="M272 140 Q282 168 278 230 Q270 198 264 165Z"
-              fill="#111010"
-            />
-            <path
-              d="M60 400 Q58 290 200 258 Q342 290 340 400Z"
-              fill="#1a1816"
-            />
-            <rect x="186" y="232" width="28" height="38" rx="7" fill="#b8b0a8" />
-            <ellipse cx="175" cy="148" rx="16" ry="12" fill="#2c2825" opacity="0.4" />
-            <ellipse cx="225" cy="148" rx="16" ry="12" fill="#2c2825" opacity="0.4" />
-            <ellipse cx="175" cy="147" rx="12" ry="9" fill="#e8e4e0" />
-            <ellipse cx="225" cy="147" rx="12" ry="9" fill="#e8e4e0" />
-            <ellipse cx="175" cy="148" rx="8" ry="8" fill="#3a3530" />
-            <ellipse cx="225" cy="148" rx="8" ry="8" fill="#3a3530" />
-            <ellipse cx="175" cy="148" rx="4" ry="4" fill="#080808" />
-            <ellipse cx="225" cy="148" rx="4" ry="4" fill="#080808" />
-            <ellipse cx="178" cy="144" rx="2.5" ry="2" fill="white" opacity="0.85" />
-            <ellipse cx="228" cy="144" rx="2.5" ry="2" fill="white" opacity="0.85" />
-            <path
-              d="M148 135 Q175 126 198 130"
-              stroke="#1a1816"
-              strokeWidth="3.5"
-              fill="none"
-              strokeLinecap="round"
-            />
-            <path
-              d="M202 130 Q225 126 252 135"
-              stroke="#1a1816"
-              strokeWidth="3.5"
-              fill="none"
-              strokeLinecap="round"
-            />
-            <path
-              d="M194 158 Q189 172 182 178 Q194 183 200 182 Q206 183 218 178 Q211 172 206 158Z"
-              fill="rgba(0,0,0,0.1)"
-            />
-            <path
-              d="M180 195 Q200 204 220 195 Q208 208 200 210 Q192 208 180 195Z"
-              fill="#8a7870"
-            />
-            <rect width="400" height="400" fill="url(#vig)" opacity="0.65" />
-            <rect
-              width="400"
-              height="400"
-              fill="rgba(180,170,160,0.035)"
-              filter="url(#grain)"
-            />
-          </svg>
-          <div className={styles.heroGlow} />
         </div>
       </section>
 
@@ -303,3 +228,7 @@ export default function PortraitSeancePage() {
     </>
   );
 }
+
+
+
+

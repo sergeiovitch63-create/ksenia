@@ -72,7 +72,7 @@ nav a:hover {
 
 /* HERO */
 .hero {
-  height: 100vh;
+  height: 88vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,7 +108,7 @@ nav a:hover {
   letter-spacing: 0.2em;
   color: var(--gray-mid);
   text-transform: uppercase;
-  margin-bottom: 64px;
+  margin-bottom: 44px;
   animation: fadeUp 1s ease 0.2s both;
 }
 
@@ -116,7 +116,7 @@ nav a:hover {
 .stage-wrap {
   width: 100%;
   position: relative;
-  height: 420px;
+  height: 390px;
   animation: fadeUp 1s ease 0.35s both;
   perspective: 1000px;
 }
@@ -133,12 +133,12 @@ nav a:hover {
     rgba(200, 164, 106, 0.03) 40%,
     rgba(200, 164, 106, 0.07)
   );
-  border-top: 1px solid rgba(200, 164, 106, 0.12);
+  border-top: none;
   pointer-events: none;
 }
 
 .stage-floor::before {
-  content: "";
+  content: none;
   position: absolute;
   top: 0;
   left: 50%;
@@ -210,27 +210,11 @@ nav a:hover {
   display: block;
 }
 .cf-label {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 36px 18px 16px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
-  font-size: 0.55rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: rgba(245, 243, 240, 0.65);
-  text-align: center;
+  display: none;
 }
 
 .cf-dots {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 10;
+  display: none;
 }
 .cf-dot {
   width: 18px;
@@ -244,9 +228,13 @@ nav a:hover {
   width: 34px;
 }
 
+.mobile-label {
+  display: none;
+}
+
 .cf-active-label {
   position: absolute;
-  bottom: 78px;
+  bottom: 8px;
   left: 50%;
   transform: translateX(-50%);
   font-family: var(--font-cormorant), serif;
@@ -263,7 +251,7 @@ nav a:hover {
   text-shadow: 0 0 30px rgba(200, 164, 106, 0.3);
 }
 .cf-active-label span {
-  display: block;
+  display: none;
   font-family: var(--font-raleway), sans-serif;
   font-size: 0.55rem;
   letter-spacing: 0.3em;
@@ -274,14 +262,7 @@ nav a:hover {
 }
 
 .scroll-hint {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+  display: none;
 }
 .scroll-hint span {
   font-size: 0.54rem;
@@ -322,12 +303,16 @@ nav a:hover {
 #services {
   background: #0f0f0f;
 }
+#services .sec-label {
+  text-align: center;
+}
 #services h2 {
   font-family: var(--font-cormorant), serif;
   font-size: clamp(1.9rem, 3.5vw, 3rem);
   font-weight: 300;
   line-height: 1.15;
   margin-bottom: 52px;
+  text-align: center;
 }
 #services h2 em {
   font-style: italic;
@@ -335,10 +320,12 @@ nav a:hover {
 }
 .services-list {
   border-top: 1px solid #1e1e1e;
+  max-width: 1040px;
+  margin: 0 auto;
 }
 .service-row {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr minmax(120px, auto) 22px;
   align-items: center;
   padding: 22px 0;
   border-bottom: 1px solid #1a1a1a;
@@ -391,6 +378,8 @@ nav a:hover {
   font-size: 1.35rem;
   font-weight: 300;
   color: var(--gold);
+  text-align: right;
+  justify-self: end;
 }
 .svc-arrow {
   font-size: 0.7rem;
@@ -398,6 +387,8 @@ nav a:hover {
   margin-left: 12px;
   transition: color 0.3s, transform 0.3s;
   flex-shrink: 0;
+  width: 22px;
+  text-align: right;
 }
 .service-row:hover .svc-arrow {
   color: var(--gold);
@@ -419,6 +410,12 @@ nav a:hover {
   height: 100%;
   display: block;
 }
+.svc-thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
 .promo {
   margin-top: 40px;
   display: flex;
@@ -429,6 +426,9 @@ nav a:hover {
   padding: 28px 36px;
   position: relative;
   overflow: hidden;
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .promo::before {
   content: "";
@@ -709,7 +709,7 @@ footer p {
   .cf-active-label {
     display: block;
     font-size: 1.1rem;
-    bottom: 68px;
+    bottom: 36px;
   }
 
   .cf-active-label span {
@@ -727,5 +727,32 @@ footer p {
   }
   .scroll-hint {
     display: none;
+  }
+}
+
+@media (max-height: 860px) and (min-width: 769px) {
+  .hero-eyebrow {
+    margin-bottom: 10px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 4.8vw, 4.3rem);
+    margin-bottom: 6px;
+  }
+
+  .hero-sub {
+    margin-bottom: 28px;
+  }
+
+  .stage-wrap {
+    height: 360px;
+  }
+
+  .cf-card {
+    bottom: 46px;
+  }
+
+  .cf-active-label {
+    bottom: 12px;
   }
 }

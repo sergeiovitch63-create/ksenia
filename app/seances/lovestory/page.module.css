@@ -50,20 +50,28 @@
 
 .hero {
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0;
+  justify-content: center;
   padding-top: 72px;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #181614 0%, #0e0c0a 100%);
 }
 
-.heroLeft {
-  padding: 80px 60px 80px 60px;
+.heroCenter {
+  width: min(980px, 100%);
+  padding: 10px 40px 70px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.carouselWrap {
+  width: 100%;
+  margin: 4px 0 12px;
 }
 
 .heroNum {
@@ -88,7 +96,7 @@
   font-style: italic;
   font-size: 1.1rem;
   color: var(--gray-mid);
-  margin-bottom: 36px;
+  margin-bottom: 28px;
   line-height: 1.5;
 }
 
@@ -96,32 +104,32 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 
 .heroPrice {
   font-family: var(--font-cormorant), serif;
-  font-size: 2.8rem;
+  font-size: clamp(3.6rem, 7vw, 6rem);
   font-weight: 300;
   color: var(--gold);
 }
 
 .heroPriceSub {
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
+  font-size: 0.92rem;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--gray-mid);
-  line-height: 1.6;
+  color: #cfcfcf;
+  line-height: 1.7;
 }
 
 .btnBook {
   display: inline-block;
   border: 1px solid var(--gold);
   color: var(--gold);
-  padding: 14px 40px;
+  padding: 20px 64px;
   font-family: var(--font-raleway), sans-serif;
-  font-size: 0.62rem;
-  letter-spacing: 0.28em;
+  font-size: 0.9rem;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.35s;
@@ -131,15 +139,6 @@
 .btnBook:hover {
   background: var(--gold);
   color: var(--black);
-}
-
-.heroRight {
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #181614 0%, #0e0c0a 100%);
 }
 
 .heroIllustration {
@@ -452,17 +451,12 @@
   }
 
   .hero {
-    grid-template-columns: 1fr;
     min-height: auto;
+    justify-content: flex-start;
   }
 
-  .heroLeft {
+  .heroCenter {
     padding: 100px 24px 48px;
-  }
-
-  .heroRight {
-    height: 56vw;
-    min-height: 260px;
   }
 
   .section {

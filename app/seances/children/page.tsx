@@ -1,8 +1,9 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useEffect } from "react";
 import styles from "./page.module.css";
+import { ChildrenOnlyCarousel } from "@/components/home/ChildrenOnlyCarousel";
 
 export default function ChildrenSeancePage() {
   useEffect(() => {
@@ -63,12 +64,15 @@ export default function ChildrenSeancePage() {
       </svg>
 
       <section className={styles.hero}>
-        <div className={styles.heroLeft}>
+        <div className={styles.heroCenter}>
           <span className={`${styles.heroNum} ${styles.anim}`}>05 — Ксения Кошка</span>
           <h1 className={`${styles.heroTitle} ${styles.anim} ${styles.anim1}`}>
             Детская фотосессия
           </h1>
           <div className={`${styles.divider} ${styles.anim} ${styles.anim2}`} />
+          <div className={styles.carouselWrap}>
+            <ChildrenOnlyCarousel />
+          </div>
           <p className={`${styles.heroTagline} ${styles.anim} ${styles.anim2}`}>
             Детство — это мгновение
           </p>
@@ -83,78 +87,6 @@ export default function ChildrenSeancePage() {
           <Link href="#book" className={`${styles.btnBook} ${styles.anim} ${styles.anim4}`}>
             Записаться
           </Link>
-        </div>
-        <div className={styles.heroRight}>
-          <svg
-            className={styles.heroIllustration}
-            viewBox="0 0 400 400"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice"
-          >
-            <defs>
-              <radialGradient id="hero-bg-children" cx="50%" cy="40%" r="65%">
-                <stop offset="0%" stopColor="#2a2824" />
-                <stop offset="100%" stopColor="#0c0b0a" />
-              </radialGradient>
-              <radialGradient id="hero-light-children" cx="60%" cy="20%" r="55%">
-                <stop offset="0%" stopColor="rgba(255,255,255,0.14)" />
-                <stop offset="100%" stopColor="transparent" />
-              </radialGradient>
-            </defs>
-            <rect width="400" height="400" fill="url(#hero-bg-children)" />
-            <rect width="400" height="400" fill="url(#hero-light-children)" />
-
-            <rect y="280" width="400" height="120" fill="#181614" opacity="0.6" />
-            <ellipse cx="280" cy="60" rx="90" ry="70" fill="rgba(255,255,255,0.08)" />
-            <path
-              d="M110 400 Q112 290 136 264 Q158 240 200 238 Q242 240 264 264 Q288 290 290 400Z"
-              fill="#1c1a18"
-            />
-            <path
-              d="M80 290 Q105 275 136 282"
-              stroke="#c8c0b8"
-              strokeWidth="18"
-              fill="none"
-              strokeLinecap="round"
-            />
-            <path
-              d="M320 290 Q295 275 264 282"
-              stroke="#c8c0b8"
-              strokeWidth="16"
-              fill="none"
-              strokeLinecap="round"
-            />
-            <rect x="187" y="222" width="26" height="22" rx="5" fill="#c8c0b8" />
-            <ellipse cx="200" cy="196" rx="60" ry="66" fill="#c8c0b8" />
-            <path d="M140 180 Q143 148 200 140 Q257 148 260 180" fill="#111" />
-            <path d="M140 180 Q134 198 136 238 Q142 218 146 194Z" fill="#111" />
-            <path d="M260 180 Q266 198 264 238 Q258 218 254 194Z" fill="#111" />
-            <path d="M196 140 Q200 128 204 140" stroke="#111" strokeWidth="8" fill="none" />
-            <ellipse cx="178" cy="194" rx="18" ry="14" fill="#e8e4e0" />
-            <ellipse cx="222" cy="194" rx="18" ry="14" fill="#e8e4e0" />
-            <ellipse cx="178" cy="195" rx="13" ry="13" fill="#3a3530" />
-            <ellipse cx="222" cy="195" rx="13" ry="13" fill="#3a3530" />
-            <ellipse cx="178" cy="195" rx="7" ry="7" fill="#080808" />
-            <ellipse cx="222" cy="195" rx="7" ry="7" fill="#080808" />
-            <ellipse cx="181" cy="190" rx="3.5" ry="3" fill="white" opacity="0.9" />
-            <ellipse cx="225" cy="190" rx="3.5" ry="3" fill="white" opacity="0.9" />
-            <path
-              d="M172 220 Q200 238 228 220 Q216 232 200 234 Q184 232 172 220Z"
-              fill="#5a4a42"
-            />
-            <rect x="185" y="221" width="30" height="8" rx="2" fill="rgba(255,255,255,0.65)" />
-            <ellipse cx="160" cy="210" rx="24" ry="14" fill="rgba(255,255,255,0.05)" />
-            <ellipse cx="240" cy="210" rx="24" ry="14" fill="rgba(255,255,255,0.05)" />
-
-            <rect width="400" height="400" fill="url(#vig)" opacity="0.65" />
-            <rect
-              width="400"
-              height="400"
-              fill="rgba(180,170,160,0.035)"
-              filter="url(#grain)"
-            />
-          </svg>
-          <div className={styles.heroGlow} />
         </div>
       </section>
 
@@ -273,3 +205,7 @@ export default function ChildrenSeancePage() {
     </>
   );
 }
+
+
+
+

@@ -1,8 +1,9 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useEffect } from "react";
 import styles from "./page.module.css";
+import { FamilyOnlyCarousel } from "@/components/home/FamilyOnlyCarousel";
 
 export default function FamilySeancePage() {
   useEffect(() => {
@@ -63,12 +64,15 @@ export default function FamilySeancePage() {
       </svg>
 
       <section className={styles.hero}>
-        <div className={styles.heroLeft}>
+        <div className={styles.heroCenter}>
           <span className={`${styles.heroNum} ${styles.anim}`}>02 — Ксения Кошка</span>
           <h1 className={`${styles.heroTitle} ${styles.anim} ${styles.anim1}`}>
             Семейная фотосессия
           </h1>
           <div className={`${styles.divider} ${styles.anim} ${styles.anim2}`} />
+          <div className={styles.carouselWrap}>
+            <FamilyOnlyCarousel />
+          </div>
           <p className={`${styles.heroTagline} ${styles.anim} ${styles.anim2}`}>
             Моменты, которые объединяют
           </p>
@@ -83,93 +87,6 @@ export default function FamilySeancePage() {
           <Link href="#book" className={`${styles.btnBook} ${styles.anim} ${styles.anim4}`}>
             Записаться
           </Link>
-        </div>
-        <div className={styles.heroRight}>
-          <svg
-            className={styles.heroIllustration}
-            viewBox="0 0 400 400"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice"
-          >
-            <defs>
-              <radialGradient id="hero-bg-family" cx="50%" cy="40%" r="65%">
-                <stop offset="0%" stopColor="#2a2824" />
-                <stop offset="100%" stopColor="#0c0b0a" />
-              </radialGradient>
-              <radialGradient id="hero-light-family" cx="60%" cy="20%" r="55%">
-                <stop offset="0%" stopColor="rgba(255,255,255,0.14)" />
-                <stop offset="100%" stopColor="transparent" />
-              </radialGradient>
-            </defs>
-            <rect width="400" height="400" fill="url(#hero-bg-family)" />
-            <rect width="400" height="400" fill="url(#hero-light-family)" />
-
-            <ellipse cx="110" cy="130" rx="48" ry="56" fill="#b8b0a8" />
-            <path d="M62 115 Q65 78 110 72 Q155 78 158 115" fill="#111" />
-            <path d="M40 400 Q38 290 110 265 Q182 290 180 400Z" fill="#1a1816" />
-            <ellipse cx="290" cy="125" rx="44" ry="52" fill="#c0b8b0" />
-            <path d="M246 110 Q249 76 290 70 Q331 76 334 110" fill="#0e0e0e" />
-            <path d="M220 400 Q218 295 290 270 Q362 295 360 400Z" fill="#1a1816" />
-            <ellipse cx="200" cy="230" rx="34" ry="38" fill="#c8c0b8" />
-            <path d="M166 218 Q168 196 200 192 Q232 196 234 218" fill="#111" />
-            <path d="M165 400 Q163 320 200 305 Q237 320 235 400Z" fill="#141210" />
-            <path
-              d="M180 262 Q190 248 200 252"
-              stroke="#b0a8a0"
-              strokeWidth="10"
-              fill="none"
-              strokeLinecap="round"
-            />
-            <path
-              d="M220 262 Q210 248 200 252"
-              stroke="#b0a8a0"
-              strokeWidth="10"
-              fill="none"
-              strokeLinecap="round"
-            />
-            <ellipse cx="100" cy="127" rx="8" ry="6" fill="#2c2825" />
-            <ellipse cx="100" cy="127" rx="3" ry="3" fill="#060606" />
-            <ellipse cx="120" cy="127" rx="8" ry="6" fill="#2c2825" />
-            <ellipse cx="120" cy="127" rx="3" ry="3" fill="#060606" />
-            <path
-              d="M97 142 Q110 149 123 142"
-              stroke="#7a6860"
-              strokeWidth="2"
-              fill="none"
-              strokeLinecap="round"
-            />
-            <ellipse cx="280" cy="122" rx="8" ry="6" fill="#2c2825" />
-            <ellipse cx="280" cy="122" rx="3" ry="3" fill="#060606" />
-            <ellipse cx="300" cy="122" rx="8" ry="6" fill="#2c2825" />
-            <ellipse cx="300" cy="122" rx="3" ry="3" fill="#060606" />
-            <path
-              d="M276 137 Q290 145 304 137"
-              stroke="#7a6860"
-              strokeWidth="2"
-              fill="none"
-              strokeLinecap="round"
-            />
-            <ellipse cx="192" cy="227" rx="7" ry="5.5" fill="#2c2825" />
-            <ellipse cx="192" cy="227" rx="2.5" ry="2.5" fill="#060606" />
-            <ellipse cx="208" cy="227" rx="7" ry="5.5" fill="#2c2825" />
-            <ellipse cx="208" cy="227" rx="2.5" ry="2.5" fill="#060606" />
-            <path
-              d="M189 240 Q200 248 211 240"
-              stroke="#7a6860"
-              strokeWidth="2"
-              fill="none"
-              strokeLinecap="round"
-            />
-
-            <rect width="400" height="400" fill="url(#vig)" opacity="0.65" />
-            <rect
-              width="400"
-              height="400"
-              fill="rgba(180,170,160,0.035)"
-              filter="url(#grain)"
-            />
-          </svg>
-          <div className={styles.heroGlow} />
         </div>
       </section>
 
@@ -288,3 +205,7 @@ export default function FamilySeancePage() {
     </>
   );
 }
+
+
+
+

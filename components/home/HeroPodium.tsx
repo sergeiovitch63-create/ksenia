@@ -9,7 +9,7 @@ import {
 } from "react";
 import { CarouselCards } from "./CarouselCards";
 
-const LABELS = ["Портрет", "Семья", "Лав-стори", "Беременность", "Дети"];
+const LABELS = ["Портрет", "Семья", "Лав-стори", "Уличная съемка", "Дети"];
 const N = 5;
 
 export function HeroPodium() {
@@ -28,7 +28,7 @@ export function HeroPodium() {
     const mobile = W <= 768;
 
     const CW = mobile ? 200 : 220;
-    const GAP = mobile ? W * 0.42 : 250;
+    const GAP = mobile ? W * 0.46 : 320;
     const ROT_Y = mobile ? 52 : 48;
     const ROT_X = mobile ? 8 : 6;
     const SC1 = mobile ? 0.65 : 0.72;
