@@ -17,7 +17,10 @@ export function SiteHeader() {
   return (
     <header id="hdr">
       <Link href="/" className="logo">
-        Ксения <span>Кошка</span>
+        <span className="logo-main">
+          Ксения <span>Кошка</span>
+        </span>
+        <span className="logo-sub">Фотограф · Калининград</span>
       </Link>
       <nav>
         <a href="#services">Услуги</a>

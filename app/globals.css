@@ -50,8 +50,14 @@ header.scrolled {
   color: var(--white);
   text-decoration: none;
 }
+.logo-main {
+  display: inline-block;
+}
 .logo span {
   color: var(--gold);
+}
+.logo-sub {
+  display: none;
 }
 nav {
   display: flex;
@@ -668,6 +674,26 @@ footer p {
 @media (max-width: 768px) {
   header {
     padding: 18px 22px;
+    align-items: flex-start;
+  }
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+  }
+  .logo-main {
+    font-size: 1.15rem;
+    line-height: 1;
+  }
+  .logo-sub {
+    display: block;
+    font-family: var(--font-raleway), sans-serif;
+    font-size: 0.5rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+    line-height: 1.2;
   }
   nav {
     display: none;
