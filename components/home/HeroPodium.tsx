@@ -8,6 +8,8 @@ import {
   type TouchEvent,
 } from "react";
 import { CarouselCards } from "./CarouselCards";
+import HeroTitle from "./HeroTitle";
+import HeroGrain from "./HeroGrain";
 
 const LABELS = ["Портрет", "Семья", "Лав-стори", "Уличная съемка", "Дети"];
 const N = 5;
@@ -143,10 +145,9 @@ export function HeroPodium() {
 
   return (
     <section className="hero">
+      <HeroGrain />
       <p className="hero-eyebrow">Фотограф · Калининград</p>
-      <h1 className="hero-title">
-        Ксения <em>Кошка</em>
-      </h1>
+      <HeroTitle />
       <p className="hero-sub">Ловлю момент. Создаю образ.</p>
 
       <div
@@ -184,8 +185,8 @@ export function HeroPodium() {
         </div>
       </div>
 
-      <div className="scroll-hint">
-        <span>Листайте вниз</span>
+      <div className="scroll-hint scroll-hint--v2">
+        <span>SCROLL</span>
         <div className="scroll-line" />
       </div>
       <div className="mobile-label" id="mobileLabel">

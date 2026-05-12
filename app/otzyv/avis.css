@@ -1,0 +1,283 @@
+.avis-page {
+  min-height: 100vh;
+  background: var(--black);
+  color: var(--white);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.avis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 40px;
+  border-bottom: 1px solid #1a1a1a;
+}
+.avis-back {
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.avis-back:hover {
+  color: var(--gold);
+}
+.avis-brand {
+  font-family: var(--font-cormorant), serif;
+  font-size: 1rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.avis-brand span {
+  color: var(--gold);
+}
+
+.avis-shell {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+  max-width: 640px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.avis-progress {
+  width: 100%;
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.avis-progress-bar {
+  height: 1px;
+  background: #2a2826;
+  overflow: hidden;
+}
+.avis-progress-fill {
+  height: 100%;
+  background: var(--gold);
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.avis-progress-text {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.avis-step {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.avis-step h1 {
+  font-family: var(--font-cormorant), serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  line-height: 1.2;
+}
+.avis-sub {
+  color: var(--gray-mid);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.avis-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.avis-type {
+  background: transparent;
+  border: 1px solid #2a2826;
+  color: var(--gray-mid);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+.avis-type:hover {
+  color: var(--white);
+  border-color: var(--gold);
+}
+.avis-type--on {
+  background: var(--gold);
+  color: var(--black);
+  border-color: var(--gold);
+}
+
+.avis-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.avis-field > span {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+}
+.avis-field input,
+.avis-field textarea {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #2a2826;
+  color: var(--white);
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.2rem;
+  padding: 10px 0;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.avis-field input:focus,
+.avis-field textarea:focus {
+  border-color: var(--gold);
+}
+.avis-field textarea {
+  resize: vertical;
+  font-family: var(--font-raleway), sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.avis-field input[type="date"] {
+  color-scheme: dark;
+  max-width: 240px;
+}
+.avis-counter {
+  position: absolute;
+  right: 0;
+  bottom: -22px;
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  color: var(--gray-mid);
+}
+
+.avis-stars {
+  display: flex;
+  gap: 12px;
+  margin: 8px 0;
+}
+.avis-star {
+  background: transparent;
+  border: 0;
+  color: #2a2826;
+  font-size: 38px;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+  padding: 4px;
+  line-height: 1;
+}
+.avis-star:hover {
+  color: var(--gold);
+  transform: scale(1.1);
+}
+.avis-star--on {
+  color: var(--gold);
+}
+
+.avis-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.avis-next,
+.avis-prev {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+.avis-next {
+  background: var(--gold);
+  color: var(--black);
+  margin-left: auto;
+}
+.avis-next:hover:not(:disabled) {
+  opacity: 0.85;
+}
+.avis-next:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.avis-prev {
+  background: transparent;
+  color: var(--gray-mid);
+  border-color: #2a2826;
+}
+.avis-prev:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+.avis-next--submit {
+  letter-spacing: 0.25em;
+}
+
+.avis-error {
+  background: rgba(200, 60, 60, 0.1);
+  border-left: 2px solid #c83c3c;
+  padding: 14px 18px;
+  color: #f0a8a8;
+  font-size: 0.85rem;
+}
+
+.avis-done {
+  text-align: center;
+  align-items: center;
+}
+.avis-check {
+  width: 88px;
+  height: 88px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 38px;
+  margin: 0 auto;
+}
+.avis-home-link {
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 4px;
+  margin-top: 16px;
+  display: inline-block;
+}
+
+@media (max-width: 600px) {
+  .avis-header {
+    padding: 18px 24px;
+  }
+  .avis-actions {
+    flex-direction: column-reverse;
+  }
+  .avis-next,
+  .avis-prev {
+    width: 100%;
+  }
+}
