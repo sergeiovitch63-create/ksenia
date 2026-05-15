@@ -180,13 +180,13 @@ export default function LoveStorySeancePage() {
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Instagram</span>
               <p>
-                <a href="#">@ksenia.koshka</a>
+                <a href="https://instagram.com/k0shka_art" target="_blank" rel="noreferrer">@k0shka_art</a>
               </p>
             </div>
             <div className={styles.infoBlock}>
-              <span className={styles.infoLabel}>WhatsApp</span>
+              <span className={styles.infoLabel}>ВКонтакте</span>
               <p>
-                <a href="#">Написать сообщение</a>
+                <a href="https://vk.ru/fool_999" target="_blank" rel="noreferrer">vk.ru/fool_999</a>
               </p>
             </div>
             <div className={styles.infoBlock}>

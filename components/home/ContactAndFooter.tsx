@@ -23,19 +23,25 @@ export function ContactAndFooter() {
               <span className="detail-label">Instagram</span>
               <p>
                 <a
-                  href="https://instagram.com/ksenia.koshka"
+                  href="https://instagram.com/k0shka_art"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  @ksenia.koshka
+                  @k0shka_art
                 </a>
               </p>
             </div>
             <div className="detail-block">
-              <span className="detail-label">WhatsApp</span>
+              <span className="detail-label">Телефон</span>
               <p>
-                <a href="https://wa.me/" target="_blank" rel="noreferrer">
-                  Написать сообщение
+                <a href="tel:+79506718074">+7 950 671-80-74</a>
+              </p>
+            </div>
+            <div className="detail-block">
+              <span className="detail-label">ВКонтакте</span>
+              <p>
+                <a href="https://vk.ru/fool_999" target="_blank" rel="noreferrer">
+                  vk.ru/fool_999
                 </a>
               </p>
             </div>
@@ -83,14 +89,15 @@ export function ContactAndFooter() {
           <div className="footer-col">
             <span className="footer-col-title">Связь</span>
             <a
-              href="https://instagram.com/ksenia.koshka"
+              href="https://instagram.com/k0shka_art"
               target="_blank"
               rel="noreferrer"
             >
               Instagram
             </a>
-            <a href="https://wa.me/" target="_blank" rel="noreferrer">
-              WhatsApp
+            <a href="tel:+79506718074">Телефон</a>
+            <a href="https://vk.ru/fool_999" target="_blank" rel="noreferrer">
+              ВКонтакте
             </a>
           </div>
 

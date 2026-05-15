@@ -79,11 +79,12 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="menu-footer">
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+          <a href="https://instagram.com/k0shka_art" target="_blank" rel="noreferrer">
             Instagram
           </a>
-          <a href="https://wa.me/" target="_blank" rel="noreferrer">
-            WhatsApp
+          <a href="tel:+79506718074">Телефон</a>
+          <a href="https://vk.ru/fool_999" target="_blank" rel="noreferrer">
+            ВКонтакте
           </a>
           <span>Калининград</span>
         </div>
