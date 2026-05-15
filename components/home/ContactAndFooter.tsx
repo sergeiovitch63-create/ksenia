@@ -1,9 +1,10 @@
 import { Reveal } from "@/components/Reveal";
+import ContactForm from "./ContactForm";
 
 export function ContactAndFooter() {
   return (
     <>
-      <section className="sec" id="contact">
+      <section className="sec contact-sec" id="contact">
         <Reveal className="reveal">
           <span className="sec-label">Запись на съёмку</span>
           <h2>
@@ -16,43 +17,26 @@ export function ContactAndFooter() {
           </p>
         </Reveal>
         <Reveal className="contact-grid reveal">
-          <div>
-            <div className="form-row">
-              <label>Имя</label>
-              <input type="text" placeholder="Ваше имя" />
-            </div>
-            <div className="form-row">
-              <label>Тип съёмки</label>
-              <select defaultValue="">
-                <option value="">Выберите съёмку</option>
-                <option>Портретная</option>
-                <option>Семейная</option>
-                <option>Лав-стори</option>
-                <option>Для беременных</option>
-                <option>Детская</option>
-                <option>Уличная</option>
-                <option>Индивидуальная</option>
-              </select>
-            </div>
-            <div className="form-row">
-              <label>Сообщение</label>
-              <textarea placeholder="Желаемая дата, место, вопросы..." />
-            </div>
-            <button type="button" className="btn-send">
-              Отправить заявку
-            </button>
-          </div>
+          <ContactForm />
           <div>
             <div className="detail-block">
               <span className="detail-label">Instagram</span>
               <p>
-                <a href="#">@ksenia.koshka</a>
+                <a
+                  href="https://instagram.com/ksenia.koshka"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  @ksenia.koshka
+                </a>
               </p>
             </div>
             <div className="detail-block">
               <span className="detail-label">WhatsApp</span>
               <p>
-                <a href="#">Написать сообщение</a>
+                <a href="https://wa.me/" target="_blank" rel="noreferrer">
+                  Написать сообщение
+                </a>
               </p>
             </div>
             <div className="detail-block">
@@ -75,10 +59,60 @@ export function ContactAndFooter() {
         </Reveal>
       </section>
 
-      <footer>
-        <p>© 2025 Ксения Кошка · Фотограф · Калининград</p>
-        <span className="footer-mark">К · К</span>
-        <p>Все права защищены</p>
+      <footer className="footer-rich">
+        <div className="footer-inner">
+          <div className="footer-col">
+            <span className="footer-brand">
+              Ксения <span>Кошка</span>
+            </span>
+            <p className="footer-tagline">
+              Фотограф · Калининград
+              <br />
+              Работаю 7 дней в неделю
+            </p>
+          </div>
+
+          <div className="footer-col">
+            <span className="footer-col-title">Меню</span>
+            <a href="/#services">Услуги</a>
+            <a href="/#galerie">Галерея</a>
+            <a href="/#avis">Отзывы</a>
+            <a href="/#contact">Контакт</a>
+          </div>
+
+          <div className="footer-col">
+            <span className="footer-col-title">Связь</span>
+            <a
+              href="https://instagram.com/ksenia.koshka"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
+            <a href="https://wa.me/" target="_blank" rel="noreferrer">
+              WhatsApp
+            </a>
+          </div>
+
+          <div className="footer-col">
+            <span className="footer-col-title">Запись</span>
+            <p className="footer-promo">
+              −30% <span>в честь дня рождения</span>
+            </p>
+            <a href="#contact" className="footer-cta">
+              Записаться на съёмку →
+            </a>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <span className="footer-mark">К · К</span>
+          <p>© 2025 Ксения Кошка · Все права защищены</p>
+          <p>
+            <span className="footer-with">Создано с</span>
+            <span className="footer-heart"> ✦ </span>
+          </p>
+        </div>
       </footer>
     </>
   );
